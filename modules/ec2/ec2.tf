@@ -10,5 +10,9 @@ resource "aws_instance" "ec2" {
   tags = {
     Name: var.ec2name
   }
+}
+//expondo o atributo id do recurso aws_instance
+  output "instance_id" {
+    value = aws_instance.ec2.id
 
 }
